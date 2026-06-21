@@ -1,7 +1,7 @@
-import { useState } from "react";
+import Task from "../tasks/components/task";
 
 function TaskList() {
-  const taskData = [
+  const taskData: TaskDataType[] = [
     {
       id: "1",
       title: "新規顧客向け提案資料の作成",
@@ -87,16 +87,8 @@ function TaskList() {
   return (
     <>
       <div className="grid grid-cols-12">
-        {taskData.map((elem) => (
-          <>
-            <div
-              className={`col-span-2 m-2 ${elem.priority == "高" ? "bg-red-200" : elem.priority == "中" ? "bg-yellow-200" : "bg-gray-200"}`}
-            >
-              <div>{elem.title}</div>
-              <div>{elem.priority}</div>
-              <div>{elem.deadline}</div>
-            </div>
-          </>
+        {taskData.map((task) => (
+          <Task key={task.id} task={task} />
         ))}
       </div>
     </>
