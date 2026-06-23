@@ -1,11 +1,7 @@
-import { useState } from "react";
-
-function TopPage() {
+export function TopPage() {
   return (
     <>
       <div>ダッシュボード</div>
     </>
   );
 }
-
-export default TopPage;

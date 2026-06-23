@@ -12,3 +12,4 @@
 - 開発環境: Vite（React + TypeScript）
 - スタイリング: Tailwind CSS
 - コンポーネント: shadcn/ui
+- モック：MSW (Mock Service Worker)

@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
-import routes from "./routes.tsx";
+import { routeBasic } from "./routes";
 import "./index.css";
 
 async function enableMocking() {
@@ -22,7 +22,7 @@ async function enableMocking() {
 enableMocking().then(() => {
   createRoot(document.getElementById("root")!).render(
     <StrictMode>
-      <RouterProvider router={routes} />
+      <RouterProvider router={routeBasic} />
     </StrictMode>,
   );
 });

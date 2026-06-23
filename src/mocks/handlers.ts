@@ -1,5 +1,5 @@
 import { http, HttpResponse } from "msw";
-import Task from "../features/tasks/components/task";
+import { type TaskDataType } from "../features/tasks/components/task";
 
 const taskData: TaskDataType[] = [
   {

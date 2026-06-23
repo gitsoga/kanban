@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Task from "../tasks/components/task";
+import { type TaskDataType } from "../tasks/components/task";
 
-function TaskDetail() {
+export function TaskDetail() {
   const params = useParams();
   const [task, setTask] = useState<TaskDataType | null>(null);
 
@@ -18,9 +18,14 @@ function TaskDetail() {
 
   return (
     <>
-      <Task key={params.id} task={task} />
+      <div
+        className={`col-span-2 m-2 ${task.priority == "高" ? "bg-red-200" : task.priority == "中" ? "bg-yellow-200" : "bg-gray-200"}`}
+      >
+        <div>{task.title}</div>
+        <div>{task.priority}</div>
+        <div>{task.deadline}</div>
+        <div>{task.memo}</div>
+      </div>
     </>
   );
 }
-
-export default TaskDetail;

@@ -13,7 +13,7 @@ type TaskProps = {
   task: TaskDataType;
 };
 
-function Task({ task }: TaskProps) {
+export function Task({ task }: TaskProps) {
   return (
     <Link to={`/tasks/${task.id}`}>
       <div
@@ -26,5 +26,3 @@ function Task({ task }: TaskProps) {
     </Link>
   );
 }
-
-export default Task;

@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 
-const Layout = () => {
+export const Layout = () => {
   return (
     <>
       <header className="bg-gray-200">タスク登録アプリ</header>
@@ -29,5 +29,3 @@ const Layout = () => {
     </>
   );
 };
-
-export default Layout;
