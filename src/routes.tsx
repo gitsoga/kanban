@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./Layout";
-import { TopPage } from "./features/pages/TopPage";
-import { TaskList } from "./features/pages/TaskList";
-import { TaskDetail } from "./features/pages/TaskDetail";
+import { TopPage } from "./pages/TopPage";
+import { TaskList } from "./pages/TaskList";
+import { TaskDetail } from "./pages/TaskDetail";
 
 export const routeBasic = createBrowserRouter([
   {

@@ -1,4 +1,4 @@
-import { Task, type TaskDataType } from "../tasks/components/task";
+import { Task, type TaskDataType } from "../components/task/task";
 import { useEffect, useState } from "react";
 
 export function TaskList() {

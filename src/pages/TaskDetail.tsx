@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { type TaskDataType } from "../tasks/components/task";
+import { type TaskDataType } from "../components/task/task";
 
 export function TaskDetail() {
   const params = useParams();
