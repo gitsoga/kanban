@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { type TaskDataType } from "../components/task/task";
 
 export function TaskDetail() {
+  const navigate = useNavigate();
   const params = useParams();
   const [task, setTask] = useState<TaskDataType | null>(null);
 
@@ -16,6 +17,10 @@ export function TaskDetail() {
     return <div>Loading...</div>;
   }
 
+  const handleForm = () => {
+    navigate(`/tasks/${params.id}/edit`);
+  };
+
   return (
     <>
       <div
@@ -26,6 +31,12 @@ export function TaskDetail() {
         <div>{task.deadline}</div>
         <div>{task.memo}</div>
       </div>
+      <button
+        className="bg-blue-500 text-white font-bold py-2 px-4 rounded m-2"
+        onClick={handleForm}
+      >
+        編集画面へ
+      </button>
     </>
   );
 }
